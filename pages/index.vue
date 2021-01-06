@@ -6,7 +6,7 @@
         CONTENT: {{ titleText }}
       </h1>
       <h1 class="title">
-        API HOST: {{ $config.API_HOST }}
+        API HOST: {{ host }}
       </h1>
       <div class="links">
         <a
@@ -34,7 +34,8 @@
 export default {
   data() {
     return {
-      titleText: this.$config.DEFAULT_TITLE_TEXT || 'undefined',
+      titleText: process.env.DEFAULT_TITLE_TEXT || 'undefined',
+      host: process.env.API_HOST || 'undefined',
     }
   },
 }
