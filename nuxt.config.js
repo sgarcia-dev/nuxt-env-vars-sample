@@ -29,17 +29,17 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   },
-  publicRuntimeConfig: {
-    DEFAULT_TITLE_TEXT: process.env.DEFAULT_TITLE_TEXT,
-    API_HOST: process.env.API_HOST
-  },
-  privateRuntimeConfig: {
-    apiSecret: process.env.API_SECRET
-  }
+  // publicRuntimeConfig: {
+  //   DEFAULT_TITLE_TEXT: process.env.DEFAULT_TITLE_TEXT,
+  //   API_HOST: process.env.API_HOST
+  // },
+  // privateRuntimeConfig: {
+  //   apiSecret: process.env.API_SECRET
+  // }
 }
