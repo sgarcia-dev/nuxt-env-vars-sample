@@ -3,7 +3,10 @@
     <div>
       <Logo />
       <h1 class="title">
-        nuxt-env-variables-sample
+        CONTENT: {{ titleText }}
+      </h1>
+      <h1 class="title">
+        API HOST: {{ $config.API_HOST }}
       </h1>
       <div class="links">
         <a
@@ -28,7 +31,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      titleText: this.$config.DEFAULT_TITLE_TEXT || 'undefined',
+    }
+  },
+}
 </script>
 
 <style>
